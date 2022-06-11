@@ -1,12 +1,16 @@
 <script>
   let count = 0
+  $: doubled = count*2
   const increment = () => {
     count += 1
+  }
+  $:{
+    console.log(``)
   }
 </script>
 
 <button on:click={increment}>
-  Clicks: {count}
+  Clicks: {doubled}
 </button>
 
 <style>
